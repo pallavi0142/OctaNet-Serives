@@ -1,137 +1,112 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing:border-box;
 }
-
 .container{
-    max-width: 80vw;
-    font-family: 'Ubuntu', sans-serif;
+    width:100%;
+    min-height:100vh;
+    background:linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+.todo-ap{
+    width:100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+
+
+}
+.todo-ap h2{
+    color:#002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.todo-ap h2 img{
+    width:30px;
+    margin-left: 10px;
+
+
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
 }
 
-.navbar{
-    display: flex;
-    height: 67px;
+input{
+    flex:1;
+    border:none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
 }
-.navbar li{
+button{
+    border:none;
+    outline:none;
+    padding:15px 50px;
+    background: #ff5945;
+    color:#fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+
+}
+
+ul li{
     list-style: none;
-    margin: 0 12px;
+    font-size: 17px;
+    padding:12px 8px 12px 50px;
+    user-select: none;
+    cursor:pointer;
+    position:relative;
+
 }
 
-.topleft{
-    width: 50%;
+ul li::before {
+    content: '';
+    position:absolute;
+    height:28px;
+    width:28px;
+    border-radius: 50%;
+    background-image: url("uncheck.png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+
 }
 
-.topright{ 
-    width: 50%;
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
 }
-
-.section1{
-   max-height: 100vh; 
-   color: #711e15;
+ul li.checked::before{
+    background-image: url("check.png");
 }
-
-.section1 h1{
-    color: #37110d;
-    font-size: 2rem;
-}
-
-.logo{
-    font-size: 1.3rem;
-}
-
-.dumbellimg{
-    width: 289px;
-}
-
-.topright .gymimg{
-    width: 466px;
-}
-
-.section2{
-    padding: 73px;
-}
-
-.section2 h1{
-    font-size: 2.3rem;
-}
-
-.section2 p{
-    padding: 0 8vw;
+ul li span{
+    position: absolute;
+    right:0;
+    top: 5px;
+    width: 40px;
+    height:40px;
+    font-size: 22px;
+    color:#555;
+    line-height: 40px;
     text-align: center;
+    border-radius: 50%;
+
+}
+ul li span:hover{
+    background: #edeef0;
 }
 
-.box{
-    padding: 8px 0;
-    margin: 12px 22px;
-    min-width: 20vw;
-    border: 2px solid rgb(120, 54, 16);
-    border-radius: 8px;
-    text-align: center;
-}
-
-.box h2{
-    font-size: 2rem;
-    padding: 15px 0;
-}
-
-.highlighted{
-    font-size: 1.2rem;
-    font-weight: bolder;
-}
-
-.box ul{
-    list-style-type: none;
-}
-
-.box ul li{
-   margin: 12px 2px;
-}
-
-.plantable{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.section3 table{
-    width: 100%;
-    margin-bottom: 140px;
-    margin-top: 20px;
-    border-collapse: collapse;
-}
-
-.section3 table th{ 
-    width: 23vw; 
-    border-bottom: 2px solid black;
-    padding: 15px 0;
-} 
-
-.section3 table td{   
-    border-bottom: 2px solid black; 
-} 
- 
-
-.section3 h1{
-    font-size: 2.3rem;
-}
-
-.section3{
-    padding: 73px;
-}
-
-footer{
-    padding: 23px;
-    text-align: center;
-}
-.buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 12px;
-}
-
-.deal{
-    font-size: 1.2rem;
-    font-weight: bolder;
-    margin: 12px 0;
-}
